@@ -1,0 +1,28 @@
+@import "../../../styles/styles";
+
+.primeng-container {
+  @include flex-column-centered;
+  margin-top: 6vh;
+
+  .flex-row {
+    display: flex;
+    align-items: center;
+    margin-top: 2vh;
+
+    input {
+      margin-left: 1vw;
+    }
+  }
+
+  #account-type-label {
+    margin-top: 2vh;
+  }
+
+  .ui-float-label {
+    margin-top: 3.5vh;
+  }
+
+  button {
+    margin-top: 3vh;
+  }
+}

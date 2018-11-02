@@ -1,0 +1,26 @@
+<p-growl [(value)]="msgs"></p-growl>
+<div class="primeng-container">
+  <form>
+    <h1>Prime NG sample</h1>
+    <strong><label>Please enter user data</label></strong>
+
+
+    <span class="ui-float-label">
+      <input required [(ngModel)] = "valueName" id="inputName" class="float-input" name="name" type="text" size="30" pInputText >
+      <label for="inputName">Username</label>
+    </span>
+
+    <span class="ui-float-label">
+      <input required [(ngModel)] = "valueEmail" id="inputEmail" class="float-input" name="email" type="email" size="30" pInputText >
+      <label for="inputEmail">Username</label>
+    </span>
+
+
+    <span class="ui-float-label">
+      <input required [(ngModel)] = "valuePass" id="inputPass" class="float-input" name="password" type="password" size="30" pPassword >
+      <label>Enter password:</label>
+    </span>
+
+    <button pButton type="button" label="Click" (click)="saveAccount()"></button>
+  </form>
+</div>

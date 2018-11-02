@@ -1,0 +1,7 @@
+.yellow-color.mat-checkbox-checked .mat-checkbox-background {
+  background-color: green;
+}
+
+.yellow-color.mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
+  background-color: green
+}
