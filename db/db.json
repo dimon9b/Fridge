@@ -12,5 +12,11 @@
       "password": "1212412412414",
       "id": 2
     }
+    {
+      "name": "Test",
+      "email": "test@test.net",
+      "password": "111",
+      "id": 3
+    }
   ]
 }

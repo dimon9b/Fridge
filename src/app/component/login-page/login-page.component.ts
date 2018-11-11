@@ -15,6 +15,7 @@ export class LoginPageComponent {
 
   public valuePass: string;
   public valueEmail: string;
+  public isUserLogin: boolean;
 
 
   constructor(private router: Router, private UsersServices: UsersService) { }
@@ -23,13 +24,13 @@ export class LoginPageComponent {
     this.UsersServices
       .getUserByEmail(this.valueEmail)
       .subscribe((response: Array<User>) => {
-        if (response.length > 0) {
+        if (response.length > 0 && response[0].password === this.valuePass) {
           console.log(response);
           console.log('Hello ' + response[0].name);
+          this.isUserLogin = true;
         } else {
           console.log('There is no such email!!!');
         }
-
       });
   }
 
