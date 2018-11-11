@@ -10,7 +10,7 @@ import {UsersService} from '../../service/users.service';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router, public loginService: LoginService, private usersServices: UsersService) { }
+  constructor(private router: Router, public loginService: LoginService) { }
 
   public onLoginPage() {
     this.router.navigate(['login']);

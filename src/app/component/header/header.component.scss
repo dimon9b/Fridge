@@ -9,3 +9,17 @@
     margin: 0 10px
   }
 }
+
+.header__under {
+  text-align: right;
+  color: #0000ff;
+  .container {
+  }
+  .link_tabs {
+    font-weight: bold;
+    font-style: italic;
+  }
+  .active-link {
+    text-decoration: underline;
+  }
+}

@@ -9,9 +9,9 @@
   <div *ngIf="loginService.getUserLoginStatus()" class="tabs">
     <div class="row header__under">
       <div class="container">
-        <a href="fridge">My fridge</a>
-        <a href="recipes">My recipes</a>
-        <button class="btn" (click)="getUserIdStatus()">Get User ID</button>
+        <a class="link_tabs" routerLinkActive="active-link" [routerLink]="['fridge']">My fridge</a>
+        <span> / </span>
+        <a class="link_tabs" routerLinkActive="active-link" [routerLink]="['recipes']">My recipes</a>
       </div>
     </div>
   </div>
