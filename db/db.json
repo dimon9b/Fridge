@@ -37,6 +37,12 @@
       "email": "SomeEmail",
       "password": "SomePassword",
       "id": 4
+    },
+    {
+      "name": "testAgain",
+      "email": "test@test.test",
+      "password": "222",
+      "id": 5
     }
   ]
 }
