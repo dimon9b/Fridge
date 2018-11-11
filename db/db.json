@@ -4,12 +4,26 @@
       "id": 1,
       "name": "Name",
       "email": "Email",
-      "password": "Password"
+      "password": "Password",
+      "productList": [
+        {
+          "name": "potato",
+          "amount": 3
+        },
+        {
+          "name": "cheese",
+          "amount": 400
+        },
+        {
+          "name": "milk",
+          "amount": 1
+        }
+      ]
     },
     {
       "name": "Test",
       "email": "dimon9b@ukr.net",
-      "password": "1212412412414",
+      "password": "1234",
       "id": 2
     },
     {
