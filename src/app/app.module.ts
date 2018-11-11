@@ -17,6 +17,12 @@ import {AppRoutingModule} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
 
 import {UsersService} from './users.service';
+import { FridgeComponent } from './component/fridge/fridge.component';
+import { RecipesComponent } from './component/recipes/recipes.component';
+import { AddProductComponent } from './component/fridge/components/add-product/add-product.component';
+import { RecipesListComponent } from './component/recipes/components/recipes-list/recipes-list.component';
+import { AddRecipeComponent } from './component/recipes/components/add-recipe/add-recipe.component';
+import { ProductListComponent } from './component/product-list/product-list.component';
 
 
 @NgModule({
@@ -27,7 +33,13 @@ import {UsersService} from './users.service';
     HomePageComponent,
     LoginPageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FridgeComponent,
+    RecipesComponent,
+    AddProductComponent,
+    RecipesListComponent,
+    AddRecipeComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
