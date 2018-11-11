@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
-import {UsersService} from '../../users.service';
-import {User} from '../../models/user';
+import {UsersService} from '../../service/users.service';
+import {User} from '../../model/user';
 
 @Component({
   selector: 'app-forgot',

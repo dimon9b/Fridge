@@ -17,6 +17,12 @@
       "email": "test@test.net",
       "password": "111",
       "id": 3
+    },
+    {
+      "name": "SomeTest",
+      "email": "SomeEmail",
+      "password": "SomePassword",
+      "id": 4
     }
   ]
 }

@@ -16,13 +16,14 @@ import {MatButtonModule, MatInputModule, MatRadioModule, MatSnackBarModule} from
 import {AppRoutingModule} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
 
-import {UsersService} from './users.service';
+import {UsersService} from './service/users.service';
 import { FridgeComponent } from './component/fridge/fridge.component';
 import { RecipesComponent } from './component/recipes/recipes.component';
-import { AddProductComponent } from './component/fridge/components/add-product/add-product.component';
+import { AddProductComponent } from './component/fridge/add-product/add-product.component';
 import { RecipesListComponent } from './component/recipes/components/recipes-list/recipes-list.component';
 import { AddRecipeComponent } from './component/recipes/components/add-recipe/add-recipe.component';
 import { ProductListComponent } from './component/product-list/product-list.component';
+import { ProductItemComponent } from './component/product-item/product-item.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ProductListComponent } from './component/product-list/product-list.comp
     AddProductComponent,
     RecipesListComponent,
     AddRecipeComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
