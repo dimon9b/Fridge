@@ -1,9 +1,17 @@
 <div class="container-fluid">
   <div class="row header">
     <div class="container">
-      <button class="btn" (click)="onRegistrationPage()">On registration page</button>
-      <button class="btn" (click)="onLoginPage()">Login</button>
-      <button class="btn" (click)="onHomePage()">Home</button>
+      <button class="btn" *ngIf="!loginService.getUserLoginStatus()" (click)="onLoginPage()">Login</button>
+      <button class="btn" *ngIf="loginService.getUserLoginStatus()" (click)="logout()">Logout</button>
+      <a (click)="onHomePage()">FridgeApp</a>
+    </div>
+  </div>
+  <div *ngIf="loginService.getUserLoginStatus()" class="tabs">
+    <div class="row header__under">
+      <div class="container">
+        <a href="fridge">My fridge</a>
+        <a href="recipes">My recipes</a>
+      </div>
     </div>
   </div>
 </div>

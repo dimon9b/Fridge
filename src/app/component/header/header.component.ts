@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router} from '@angular/router';
+import {LoginService} from '../../service/login.service';
+import {UsersService} from '../../service/users.service';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +10,7 @@ import { Router} from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router) { }
-
-  public onRegistrationPage() {
-    this.router.navigate(['registration']);
-  }
+  constructor(private router: Router, public loginService: LoginService, private usersServices: UsersService) { }
 
   public onLoginPage() {
     this.router.navigate(['login']);
@@ -21,5 +19,11 @@ export class HeaderComponent {
   public onHomePage() {
     this.router.navigate(['']);
   }
+
+  public logout() {
+    this.router.navigate(['']);
+    this.loginService.logoutUser();
+  }
+
 
 }

@@ -3,6 +3,7 @@ import { Message } from 'primeng/api';
 import { Router} from '@angular/router';
 import { UsersService } from '../../service/users.service';
 import { User } from '../../model/user';
+import {LoginService} from '../../service/login.service';
 
 @Component({
   selector: 'app-login-page',
@@ -15,19 +16,19 @@ export class LoginPageComponent {
 
   public valuePass: string;
   public valueEmail: string;
-  public isUserLogin: boolean;
 
 
-  constructor(private router: Router, private UsersServices: UsersService) { }
+  constructor(private router: Router, private usersServices: UsersService, private loginService: LoginService) { }
 
   public checkUser() {
-    this.UsersServices
+    this.usersServices
       .getUserByEmail(this.valueEmail)
       .subscribe((response: Array<User>) => {
         if (response.length > 0 && response[0].password === this.valuePass) {
           console.log(response);
           console.log('Hello ' + response[0].name);
-          this.isUserLogin = true;
+          this.loginService.loginUser(response[0].email);
+          this.router.navigate(['fridge']);
         } else {
           console.log('There is no such email!!!');
         }
@@ -36,6 +37,10 @@ export class LoginPageComponent {
 
   public onNavigate() {
     this.router.navigate(['forgot']);
+  }
+
+  public onRegistrationPage() {
+    this.router.navigate(['registration']);
   }
 
 }

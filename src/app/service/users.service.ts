@@ -7,12 +7,11 @@ export class UsersService {
   constructor(private http: HttpClient) {  }
 
   getUsers() {
-    return this.http.get('http://localhost:3000/users');
+    return this.http.get('http://localhost:3000/users/id');
   }
 
   getUserByEmail(email) {
     const httpParams = new HttpParams().append('email', email);
-    console.log(httpParams);
     return this.http.get('http://localhost:3000/users', { params: httpParams });
   }
 
