@@ -1,7 +1,13 @@
-.yellow-color.mat-checkbox-checked .mat-checkbox-background {
-  background-color: green;
+app-header {
+  min-height: 59px
 }
 
-.yellow-color.mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
-  background-color: green
+app-footer {
+  min-height: 59px
+}
+
+.main_content {
+  min-height: calc(100vh - 118px);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

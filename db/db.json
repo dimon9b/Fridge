@@ -1,9 +1,16 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "users": [
+    {
+      "id": 1,
+      "name": "Name",
+      "email": "Email",
+      "password": "Password"
+    },
+    {
+      "name": "Test",
+      "email": "dimon9b@ukr.net",
+      "password": "1212412412414",
+      "id": 2
+    }
+  ]
 }

@@ -1,0 +1,19 @@
+.forgot_page {
+  text-align: center;
+}
+
+.entered_email_area {
+  margin: 10px auto;
+}
+
+.received_pass_area {
+  margin: 10px auto;
+  span {
+    display: block;
+    margin: 10px auto;
+    width: auto;
+  }
+  span:first-child {
+    text-align: center;
+  }
+}

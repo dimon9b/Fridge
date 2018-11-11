@@ -16,6 +16,8 @@ import {MatButtonModule, MatInputModule, MatRadioModule, MatSnackBarModule} from
 import {AppRoutingModule} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
 
+import {UsersService} from './users.service';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +47,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

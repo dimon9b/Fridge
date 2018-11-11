@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
+import {UsersService} from '../../users.service';
+import {User} from '../../models/user';
 
 @Component({
   selector: 'app-forgot',
@@ -8,10 +10,24 @@ import {Router} from '@angular/router';
 })
 export class ForgotComponent {
 
-  constructor(private router: Router) { }
+  public enteredEmail = '';
+  public receivedPass = '';
+
+  constructor(private router: Router, private UsersServices: UsersService) { }
 
   public backToForm() {
     this.router.navigate(['login']);
   }
 
+  public findPassByEmail() {
+    this.UsersServices
+      .getUserByEmail(this.enteredEmail)
+      .subscribe((response: Array<User>) => {
+        if (response.length > 0) {
+          this.receivedPass = response[0].password;
+        } else {
+          this.receivedPass = 'There is no such email in our database!';
+        }
+      });
+  }
 }

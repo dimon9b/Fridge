@@ -1,4 +1,17 @@
-<p>
-  forgot works!
-  <button (click)="backToForm()">Back to form</button>
-</p>
+<div class="container-fluid forgot_page">
+  <div class="container">
+    <p>Please enter your email to receive your password:</p>
+
+    <div class="entered_email_area">
+      <input [(ngModel)] = "enteredEmail" name="enteredEmail" class="ui-inputtext" />
+      <button class="btn" (click)="findPassByEmail()">My password</button>
+    </div>
+
+    <div class="received_pass_area" *ngIf="receivedPass?.length > 0">
+      <span class="receivedPass">{{receivedPass || ''}}</span>
+      <span>Of course, we just push your password here, because we don't have SMTP and this is just testing application (;</span>
+    </div>
+
+    <button class="btn" (click)="backToForm()">Back to form</button>
+  </div>
+</div>

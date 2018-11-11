@@ -1,6 +1,8 @@
-import {Component} from '@angular/core';
-import {Message} from 'primeng/api';
-import { Router} from '@angular/router';
+import { Component } from '@angular/core';
+import { Message } from 'primeng/api';
+import { Router } from '@angular/router';
+import { UsersService } from '../../users.service';
+import { User } from '../../models/user';
 
 
 @Component({
@@ -13,29 +15,35 @@ import { Router} from '@angular/router';
 export class RegistrationFormComponent {
 
   public msgs: Message[] = [];
-
   public valueName: string;
   public valueEmail: string;
   public valuePass: string;
-  public usersData: Object[] = [];
+  public userInfo: User;
 
 
   public successPrimeNg() {
     this.msgs.push({severity: 'success', summary: 'Item saved', detail: 'It univer demonstration'});
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private UsersServices: UsersService) { }
 
   public onNavigate() {
     this.router.navigate(['']);
   }
 
+  public addUser() {
+    this.UsersServices
+      .addUser(this.userInfo)
+      .subscribe((json) => {
+        console.log(json);
+      });
+  }
+
   public saveAccount() {
     if (this.valueName && this.valuePass && this.valueEmail) {
-
-      this.usersData.push({'name': this.valueName, 'pass': this.valuePass, 'email': this.valueEmail})
-      console.log(this.usersData);
+      this.userInfo = new User(this.valueName, this.valueEmail, this.valuePass);
       this.successPrimeNg();
+      this.addUser();
     } else {
       this.msgs.push({severity: 'error', summary: 'Item not saved', detail: 'Something is not filled'});
     }

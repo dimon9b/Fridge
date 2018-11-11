@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {Message} from 'primeng/api';
+import { Component } from '@angular/core';
+import { Message } from 'primeng/api';
 import { Router} from '@angular/router';
+import { UsersService } from '../../users.service';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-login-page',
@@ -11,28 +13,28 @@ export class LoginPageComponent {
 
   public msgs: Message[] = [];
 
-  public valueName: string;
   public valuePass: string;
-  public usersData: Array<string> = [];
+  public valueEmail: string;
 
-  public successPrimeNg() {
-    this.msgs.push({severity: 'success', summary: 'Item saved', detail: 'It univer demonstration'});
+
+  constructor(private router: Router, private UsersServices: UsersService) { }
+
+  public checkUser() {
+    this.UsersServices
+      .getUserByEmail(this.valueEmail)
+      .subscribe((response: Array<User>) => {
+        if (response.length > 0) {
+          console.log(response);
+          console.log('Hello ' + response[0].name);
+        } else {
+          console.log('There is no such email!!!');
+        }
+
+      });
   }
-
-  constructor(private router: Router) { }
 
   public onNavigate() {
     this.router.navigate(['forgot']);
-  }
-
-  public saveAccount() {
-    if (this.valueName && this.valuePass) {
-      console.log(this.valueName);
-      console.log(this.valuePass);
-      this.successPrimeNg();
-    } else {
-      this.msgs.push({severity: 'error', summary: 'Item not saved', detail: 'Something is not filled'});
-    }
   }
 
 }
