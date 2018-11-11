@@ -27,7 +27,7 @@ export class LoginPageComponent {
         if (response.length > 0 && response[0].password === this.valuePass) {
           console.log(response);
           console.log('Hello ' + response[0].name);
-          this.loginService.loginUser(response[0].email);
+          this.loginService.loginUser(response[0].id);
           this.router.navigate(['fridge']);
         } else {
           console.log('There is no such email!!!');

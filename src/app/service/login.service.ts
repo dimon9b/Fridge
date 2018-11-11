@@ -9,21 +9,21 @@ export class LoginService {
   constructor(private usersServices: UsersService) {
   }
 
-  public loginUser(email) {
+  public loginUser(id) {
     localStorage.setItem('isUserLogin', 'true');
-    localStorage.setItem('userMail', email);
+    localStorage.setItem('userId', id);
   }
 
   public logoutUser() {
     localStorage.setItem('isUserLogin', 'false');
-    localStorage.setItem('userMail', '');
+    localStorage.setItem('userId', '');
   }
 
   public getUserLoginStatus(): boolean {
     return localStorage.getItem('isUserLogin') === 'true';
   }
 
-  public getUserMailStatus() {
-    return localStorage.getItem('userMail');
+  public getUserIdStatus() {
+    return localStorage.getItem('userId');
   }
 }

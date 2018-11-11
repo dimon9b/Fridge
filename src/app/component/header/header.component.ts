@@ -24,6 +24,10 @@ export class HeaderComponent {
     this.router.navigate(['']);
     this.loginService.logoutUser();
   }
+  getUserIdStatus() {
+    console.log(this.loginService.getUserIdStatus());
+  }
+
 
 
 }
