@@ -10,20 +10,18 @@ export class LoginService {
   }
 
   public loginUser(id) {
-    localStorage.setItem('isUserLogin', 'true');
     localStorage.setItem('userId', id);
   }
 
   public logoutUser() {
-    localStorage.setItem('isUserLogin', 'false');
-    localStorage.setItem('userId', '');
+    localStorage.setItem('userId', null);
   }
 
   public getUserLoginStatus(): boolean {
-    return localStorage.getItem('isUserLogin') === 'true';
+    return localStorage.getItem('userId') !== null;
   }
 
-  public getUserIdStatus() {
-    return localStorage.getItem('userId');
+  public getUserId(): number {
+    return Number(localStorage.getItem('userId'));
   }
 }

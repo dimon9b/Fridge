@@ -25,9 +25,6 @@ export class HeaderComponent {
     this.loginService.logoutUser();
   }
   getUserIdStatus() {
-    console.log(this.loginService.getUserIdStatus());
+    console.log(this.loginService.getUserId());
   }
-
-
-
 }

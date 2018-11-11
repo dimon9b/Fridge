@@ -3,7 +3,7 @@ import {Product} from '../model/product';
 import {UsersService} from './users.service';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {resolve} from 'q';
+import {LoginService} from './login.service';
 
 
 @Injectable({
@@ -12,12 +12,14 @@ import {resolve} from 'q';
 export class ProductService {
   productList: Array<Product>;
 
-  constructor(private userService: UsersService) {
+  constructor(private userService: UsersService,
+              private loginService: LoginService) {
   }
 
   getProductList(): Observable<Product[]> {
+    const userId = this.loginService.getUserId();
     if (!this.productList) {
-      return this.userService.getUserById(1).pipe(map(user => {
+      return this.userService.getUserById(userId).pipe(map(user => {
         this.productList = user.productList;
         return this.productList;
       }));
@@ -26,11 +28,11 @@ export class ProductService {
   }
 
   addProduct(product: Product) {
+    const userId = this.loginService.getUserId();
     this.productList.push(product);
 
-    this.userService.getUserById(1).subscribe(user => {
+    this.userService.getUserById(userId).subscribe(user => {
       user.productList = this.productList;
-      console.log(user);
       this.userService.updateUser(user).subscribe();
     });
   }
