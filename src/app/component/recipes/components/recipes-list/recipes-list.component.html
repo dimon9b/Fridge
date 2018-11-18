@@ -1,3 +1,6 @@
-<p>
-  recipes-list works!
-</p>
+<button (click)="showRecipes()" class="btn">Show recipes</button>
+<div class="recipes-list">
+  <div class="recipe" *ngFor="let recipe of recipesList">
+    <app-recipe-item [recipe]="recipe"></app-recipe-item>
+  </div>
+</div>

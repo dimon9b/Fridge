@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
-import {UsersService} from './users.service';
+import {isNullOrUndefined} from "util";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor(private usersServices: UsersService) {
+  constructor() {
   }
 
   public loginUser(id) {
@@ -14,14 +14,17 @@ export class LoginService {
   }
 
   public logoutUser() {
-    localStorage.setItem('userId', null);
+    localStorage.removeItem('userId');
   }
 
-  public getUserLoginStatus(): boolean {
-    return localStorage.getItem('userId') !== null;
+  public isLoggedInUser(): boolean {
+    const userId = localStorage.getItem('userId');
+    return !isNullOrUndefined(userId);
   }
 
   public getUserId(): number {
     return Number(localStorage.getItem('userId'));
   }
+
+
 }

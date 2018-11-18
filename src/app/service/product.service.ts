@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Product} from '../model/product';
 import {UsersService} from './users.service';
 import {Observable} from 'rxjs';
+import {of} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {LoginService} from './login.service';
 
@@ -10,24 +11,24 @@ import {LoginService} from './login.service';
   providedIn: 'root'
 })
 export class ProductService {
-  productList: Array<Product>;
+  productList: Array<Product> = [];
 
   constructor(private userService: UsersService,
               private loginService: LoginService) {
   }
 
-  getProductList(): Observable<Product[]> {
-    const userId = this.loginService.getUserId();
-    if (!this.productList) {
+  public getProductList(): Observable<Product[]> {
+    if (this.productList.length === 0) {
+      const userId = this.loginService.getUserId();
       return this.userService.getUserById(userId).pipe(map(user => {
         this.productList = user.productList;
         return this.productList;
       }));
     }
-    return Observable.create(this.productList);
+    return of(this.productList);
   }
 
-  addProduct(product: Product) {
+  public addProduct(product: Product) {
     const userId = this.loginService.getUserId();
     this.productList.push(product);
 
@@ -35,5 +36,9 @@ export class ProductService {
       user.productList = this.productList;
       this.userService.updateUser(user).subscribe();
     });
+  }
+
+  public clearProductList() {
+    this.productList = [];
   }
 }

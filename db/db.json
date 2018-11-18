@@ -17,32 +17,109 @@
         {
           "name": "milk",
           "amount": 1
+        },
+        {
+          "name": "wisky",
+          "amount": 23
         }
       ]
     },
     {
-      "name": "Test",
-      "email": "dimon9b@ukr.net",
-      "password": "1234",
+      "name": "t",
+      "email": "t",
+      "password": "t",
+      "productList": [
+        {
+          "name": "vodyara",
+          "amount": 13
+        },
+        {
+          "name": "Potato",
+          "amount": 1
+        },
+        {
+          "name": "Chicken",
+          "amount": 0.5
+        },
+        {
+          "name": "Water",
+          "amount": 2
+        },
+        {
+          "name": "Potato",
+          "amount": 3
+        }
+      ],
       "id": 2
     },
     {
-      "name": "Test",
-      "email": "test@test.net",
-      "password": "111",
+      "name": "test2",
+      "email": "test2",
+      "password": "test2",
+      "productList": [
+        {
+          "name": "1212",
+          "amount": 324
+        },
+        {
+          "name": "342414",
+          "amount": 1241
+        }
+      ],
       "id": 3
+    }
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Borsh",
+      "type": "Soup",
+      "description": "This is Borsh",
+      "image": "image",
+      "productList": [
+        {
+          "name": "Potato",
+          "amount": 1
+        },
+        {
+          "name": "Chicken",
+          "amount": 0.5
+        }
+      ]
     },
     {
-      "name": "SomeTest",
-      "email": "SomeEmail",
-      "password": "SomePassword",
-      "id": 4
+      "id": 2,
+      "name": "Tea",
+      "type": "Dessert",
+      "description": "This is Tea",
+      "image": "image2",
+      "productList": [
+        {
+          "name": "water",
+          "amount": 1
+        },
+        {
+          "name": "tea",
+          "amount": 1
+        }
+      ]
     },
     {
-      "name": "testAgain",
-      "email": "test@test.test",
-      "password": "222",
-      "id": 5
+      "id": 3,
+      "name": "Chicken",
+      "type": "Other",
+      "description": "This is Chicken",
+      "image": "image3",
+      "productList": [
+        {
+          "name": "Chicken",
+          "amount": 1
+        },
+        {
+          "name": "Water",
+          "amount": 1
+        }
+      ]
     }
   ]
 }

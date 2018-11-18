@@ -1,0 +1,19 @@
+<div class="recipe__item">
+  <h2>{{recipe.name}}</h2>
+  <div class="image">
+    <img src="#" alt="{{recipe.image}}" />
+  </div>
+  <div class="right_part">
+    <div class="type"></div>
+    <div class="recipes_prodList">
+      <ul>
+        <li *ngFor="let product of productList">
+          <app-product-item [product]="product"></app-product-item>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <p>{{recipe.description}}</p>
+    </div>
+  </div>
+</div>
