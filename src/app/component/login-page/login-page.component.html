@@ -15,9 +15,9 @@
 
   <span class="error_log"></span>
 
-  <a class="span_link" (click)="onNavigate()">Forgot password?</a>
+  <a class="link" (click)="onNavigate()">Forgot password?</a>
 
-  <button class="btn" (click)="onRegistrationPage()">Sign up</button>
+  <a class="link" (click)="onRegistrationPage()">Sign up</a>
 
   <button pButton type="button" label="Sign in" (click)="checkUser()" [disabled]="(!valueEmail || !valuePass)"></button>
 </div>
