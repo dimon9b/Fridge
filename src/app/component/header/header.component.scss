@@ -10,6 +10,13 @@
   }
 }
 
+.tabs {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 20;
+}
+
 .header__under {
   text-align: right;
   color: #0000ff;

@@ -1,13 +1,14 @@
 app-header {
-  min-height: 59px
+  min-height: 59px;
 }
 
 app-footer {
-  min-height: 59px
+  min-height: 59px;
 }
 
 .main_content {
-  min-height: calc(100vh - 118px);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  min-height: calc(100vh - 119px);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: url("../assets/images/bg_fridge.png") 200px 200px repeat;
 }

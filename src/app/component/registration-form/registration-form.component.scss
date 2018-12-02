@@ -6,7 +6,13 @@
 
 .primeng-container {
   @include flex-column-centered;
-  margin-top: 6vh;
+  max-width: 500px;
+  background: #fff;
+  margin: 30px auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   .flex-row {
     display: flex;
