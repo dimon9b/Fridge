@@ -1,8 +1,9 @@
 <div class="container-fluid">
   <div class="row header">
     <div class="container">
-      <button class="btn" *ngIf="!loginService.isLoggedInUser()" (click)="onLoginPage()">Login</button>
-      <button class="btn" *ngIf="loginService.isLoggedInUser()" (click)="logout()">Logout</button>
+      <button class="btn" *ngIf="!loginService.isLoggedInUser()" (click)="onRegistrationPage()">Sign up</button>
+      <button class="btn" *ngIf="!loginService.isLoggedInUser()" (click)="onLoginPage()">Sign in</button>
+      <button class="btn" *ngIf="loginService.isLoggedInUser()" (click)="logout()">Sign out</button>
       <a (click)="onHomePage()">FridgeApp</a>
     </div>
   </div>

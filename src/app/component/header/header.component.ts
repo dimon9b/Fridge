@@ -18,6 +18,10 @@ export class HeaderComponent {
     this.router.navigate(['login']);
   }
 
+  public onRegistrationPage() {
+    this.router.navigate(['registration']);
+  }
+
   public onHomePage() {
     this.router.navigate(['']);
   }
