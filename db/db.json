@@ -77,7 +77,8 @@
       "id": 1,
       "name": "Borsh",
       "type": "Soup",
-      "description": "This is Borsh",
+      "shortDescription": "This is Borsh",
+      "longDescription": "This is Borsh",
       "image": "image",
       "productList": [
         {
@@ -94,7 +95,8 @@
       "id": 2,
       "name": "Tea",
       "type": "Dessert",
-      "description": "This is Tea",
+      "shortDescription": "This is Tea",
+      "longDescription": "This is Tea",
       "image": "image2",
       "productList": [
         {
@@ -111,7 +113,8 @@
       "id": 3,
       "name": "Chicken",
       "type": "Other",
-      "description": "This is Chicken",
+      "shortDescription": "This is Chicken",
+      "longDescription": "This is Chicken",
       "image": "image3",
       "productList": [
         {

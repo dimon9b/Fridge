@@ -1,7 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {Product} from "../../../../model/product";
 import {RecipesService} from "../../../../service/recipes.service";
 import {Recipe} from "../../../../model/recipe";
+import {EmitterService} from "../../../../service/emitter.service";
 
 @Component({
   selector: 'app-recipe-item',
@@ -14,10 +15,18 @@ export class RecipeItemComponent implements OnInit {
   @Input()
   public recipe: Recipe;
 
-  constructor(private recipeService: RecipesService) { }
+  @Output()
+  public passDataToPopup = new EventEmitter<Recipe>();
+
+  constructor(private recipeService: RecipesService,
+              private emitterService: EmitterService) { }
 
   ngOnInit() {
     this.productList = this.recipe.productList;
+  }
+
+  public showFullInfo() {
+    this.emitterService.getRecipeEmitter().emit(this.recipe);
   }
 
 }

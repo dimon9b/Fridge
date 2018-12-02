@@ -1,5 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ButtonModule, GrowlModule, InputTextareaModule, InputTextModule, PasswordModule, RadioButtonModule} from 'primeng/primeng';
+import { MatButtonModule, MatInputModule, MatRadioModule, MatSnackBarModule} from '@angular/material';
+import { AppRoutingModule} from './app.routing';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { RegistrationFormComponent } from './component/registration-form/registration-form.component';
@@ -8,15 +14,6 @@ import { HomePageComponent } from './component/home-page/home-page.component';
 import { LoginPageComponent } from './component/login-page/login-page.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ButtonModule, GrowlModule, InputTextareaModule, InputTextModule, PasswordModule, RadioButtonModule} from 'primeng/primeng';
-import { MatButtonModule, MatInputModule, MatRadioModule, MatSnackBarModule} from '@angular/material';
-import { AppRoutingModule} from './app.routing';
-import { HttpClientModule} from '@angular/common/http';
-
-import { UsersService } from './service/users.service';
 import { FridgeComponent } from './component/fridge/fridge.component';
 import { RecipesComponent } from './component/recipes/recipes.component';
 import { AddProductComponent } from './component/fridge/add-product/add-product.component';
@@ -25,9 +22,11 @@ import { AddRecipeComponent } from './component/recipes/components/add-recipe/ad
 import { ProductListComponent } from './component/product-list/product-list.component';
 import { ProductItemComponent } from './component/product-item/product-item.component';
 import { RecipeItemComponent } from './component/recipes/components/recipe-item/recipe-item.component';
+import { RecipePopupComponent } from './component/recipes/components/recipe-popup/recipe-popup.component';
+
+import { UsersService } from './service/users.service';
 
 import { FilterRecipesPipe } from './pipes/filter-recipes.pipe';
-
 
 
 @NgModule({
@@ -47,7 +46,8 @@ import { FilterRecipesPipe } from './pipes/filter-recipes.pipe';
     ProductListComponent,
     ProductItemComponent,
     RecipeItemComponent,
-    FilterRecipesPipe
+    FilterRecipesPipe,
+    RecipePopupComponent
   ],
   imports: [
     BrowserModule,

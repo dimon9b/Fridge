@@ -1,0 +1,10 @@
+<div class="recipe_popup">
+  <div class="recipe__image">{{recipe.image}}</div>
+  <div class="recipe__title">{{recipe.name}}</div>
+  <div class="recipe__prodList">
+    <ul *ngFor="let item of recipe.productList">
+      <li>{{item}}</li>
+    </ul>
+  </div>
+  <div class="recipe_description">{{recipe.longDescription}}</div>
+</div>
