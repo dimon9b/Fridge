@@ -3,7 +3,8 @@ import { RecipesService } from '../../../../service/recipes.service';
 import { Recipe } from '../../../../model/recipe';
 import { ProductService } from '../../../../service/product.service';
 import { Product } from '../../../../model/product';
-import { switchMap } from 'rxjs/operators';
+import { forkJoin } from 'rxjs';
+// import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-recipes-list',
@@ -24,15 +25,21 @@ export class RecipesListComponent implements OnInit {
   ngOnInit() {
     this.productService.getProductList().subscribe(productList => {
       this.userProductList = productList;
-    });
-    this.recipesService.getRecipes().subscribe(recipes => {
-      this.allRecipeList = recipes;
-    });
-  }
 
-  public showRecipes() {
-    this.sortProductList();
-    this.filterRecipeListByProductMatch(this.productMatch);
+      this.recipesService.getRecipes().subscribe(recipes => {
+        this.allRecipeList = recipes;
+        this.sortProductList();
+        this.filterRecipeListByProductMatch(this.productMatch);
+      });
+    });
+
+    // This works better and faster
+    // forkJoin(this.productService.getProductList(), this.recipesService.getRecipes()).subscribe((data) => {
+    //   this.userProductList = data[0];
+    //   this.allRecipeList = data[1];
+    //   this.sortProductList();
+    //   this.filterRecipeListByProductMatch(this.productMatch);
+    // });
   }
 
   filterRecipeListByProductMatch(productMatch: number) {
