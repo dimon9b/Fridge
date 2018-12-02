@@ -10,13 +10,13 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {ButtonModule, GrowlModule, InputTextareaModule, InputTextModule, PasswordModule, RadioButtonModule} from 'primeng/primeng';
-import {MatButtonModule, MatInputModule, MatRadioModule, MatSnackBarModule} from '@angular/material';
-import {AppRoutingModule} from './app.routing';
-import {HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ButtonModule, GrowlModule, InputTextareaModule, InputTextModule, PasswordModule, RadioButtonModule} from 'primeng/primeng';
+import { MatButtonModule, MatInputModule, MatRadioModule, MatSnackBarModule} from '@angular/material';
+import { AppRoutingModule} from './app.routing';
+import { HttpClientModule} from '@angular/common/http';
 
-import {UsersService} from './service/users.service';
+import { UsersService } from './service/users.service';
 import { FridgeComponent } from './component/fridge/fridge.component';
 import { RecipesComponent } from './component/recipes/recipes.component';
 import { AddProductComponent } from './component/fridge/add-product/add-product.component';
@@ -25,6 +25,9 @@ import { AddRecipeComponent } from './component/recipes/components/add-recipe/ad
 import { ProductListComponent } from './component/product-list/product-list.component';
 import { ProductItemComponent } from './component/product-item/product-item.component';
 import { RecipeItemComponent } from './component/recipes/components/recipe-item/recipe-item.component';
+
+import { FilterRecipesPipe } from './pipes/filter-recipes.pipe';
+
 
 
 @NgModule({
@@ -43,7 +46,8 @@ import { RecipeItemComponent } from './component/recipes/components/recipe-item/
     AddRecipeComponent,
     ProductListComponent,
     ProductItemComponent,
-    RecipeItemComponent
+    RecipeItemComponent,
+    FilterRecipesPipe
   ],
   imports: [
     BrowserModule,

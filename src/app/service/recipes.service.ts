@@ -10,23 +10,12 @@ import {Product} from "../model/product";
 export class RecipesService {
 
   productList: Array<Product> = [];
+  allRecipes: Array<Recipe> = [];
 
   constructor(private http: HttpClient) {  }
 
   public getRecipes(): Observable<Recipe[]> {
     return this.http.get<Recipe[]>('http://localhost:3000/recipes');
   }
-
-  public getRecipesListByUserList(userProdArray) {
-    userProdArray.forEach((value, index) => {
-      console.log(userProdArray[index].name, userProdArray[index].amount);
-    });
-    return this.http.get<Recipe[]>('http://localhost:3000/recipes');
-  }
-
-
-
-
-
 
 }

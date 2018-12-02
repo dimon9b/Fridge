@@ -14,4 +14,11 @@ export class Recipe {
   //   this.listOfProd = [productName, productAmount];
   //   this.description = description;
   // }
+
+  constructor ( name: string, image: string, description: string, productName: Product['name'], productAmount: Product['amount']) {
+    this.name = name;
+    this.image = image;
+    this.description = description;
+    this.productList = [{'name': productName, 'amount': productAmount}];
+  }
 }

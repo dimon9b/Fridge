@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { RecipesService } from "../../../../service/recipes.service";
 import { Recipe } from "../../../../model/recipe";
 import {ProductService} from "../../../../service/product.service";
+import {LoginService} from "../../../../service/login.service";
 import {Product} from "../../../../model/product";
+import {User} from "../../../../model/user";
+import {UsersService} from "../../../../service/users.service";
+
 
 @Component({
   selector: 'app-recipes-list',
@@ -19,6 +23,7 @@ export class RecipesListComponent implements OnInit {
               private productService: ProductService) { }
 
   ngOnInit() {
+
   }
 
   // public showRecipes() {
@@ -37,10 +42,27 @@ export class RecipesListComponent implements OnInit {
 
   public showRecipes() {
     this.uploadUserInfo();
-    this.recipesService.getRecipesListByUserList(this.productList).subscribe(recipesList => {
-        this.recipesList = recipesList;
-      }
-    );
+    this.recipesService.getRecipes().subscribe(recipesList => {
+
+      recipesList.forEach((value, index) => {
+        let prodListOfCurrentRecipe = recipesList[index].productList;
+        console.log(prodListOfCurrentRecipe);
+        // filterRecipes: this.productList, prodListOfCurrentRecipe;
+
+        this.productList.forEach(item => {
+          const productFound = prodListOfCurrentRecipe.find(product => item.name === product.name);
+          if (!productFound) {
+            console.log('not passed');
+            return null;
+          } else {
+            console.log('passed');
+          }
+        });
+        console.log(recipesList[index].name, recipesList[index].productList);
+      });
+
+      this.recipesList = recipesList;
+    });
   }
 
   public uploadUserInfo() {

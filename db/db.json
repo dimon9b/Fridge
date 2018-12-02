@@ -30,24 +30,12 @@
       "password": "t",
       "productList": [
         {
-          "name": "vodyara",
-          "amount": 13
-        },
-        {
           "name": "Potato",
           "amount": 1
         },
         {
           "name": "Chicken",
           "amount": 0.5
-        },
-        {
-          "name": "Water",
-          "amount": 2
-        },
-        {
-          "name": "Potato",
-          "amount": 3
         }
       ],
       "id": 2
