@@ -20,6 +20,6 @@
       <label>Enter password:</label>
     </span>
 
-    <button pButton type="button" label="Click" (click)="saveAccount()"></button>
+    <button pButton type="button" label="Registration" (click)="saveAccount()" [disabled]="(!valueName || !valueEmail || !valuePass)"></button>
   </form>
 </div>

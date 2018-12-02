@@ -19,5 +19,5 @@
 
   <button class="btn" (click)="onRegistrationPage()">On registration page</button>
 
-  <button pButton type="button" label="Click" (click)="checkUser()"></button>
+  <button pButton type="button" label="Login" (click)="checkUser()" [disabled]="(!valueEmail || !valuePass)"></button>
 </div>
