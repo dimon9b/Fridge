@@ -44,6 +44,10 @@
         {
           "name": "tea",
           "amount": 12
+        },
+        {
+          "name": "Tomato",
+          "amount": 1
         }
       ],
       "id": 2
@@ -88,6 +92,14 @@
         {
           "name": "Chicken",
           "amount": 0.5
+        },
+        {
+          "name": "Tomato",
+          "amount": 3
+        },
+        {
+          "name": "Beetroot",
+          "amount": 4
         }
       ]
     },
@@ -123,6 +135,24 @@
         },
         {
           "name": "Water",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Cofee",
+      "type": "Other",
+      "shortDescription": "This is Cofee",
+      "longDescription": "This is Cofee",
+      "image": "image4",
+      "productList": [
+        {
+          "name": "Cofee",
+          "amount": 1
+        },
+        {
+          "name": "Milk",
           "amount": 1
         }
       ]

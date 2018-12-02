@@ -1,9 +1,12 @@
 <button (click)="showRecipes()" class="btn">Show recipes</button>
+<br>
+<select [(ngModel)]="productMatch" (change)="filterRecipeListByProductMatch(productMatch)">
+  <option value="100">Full match</option>
+  <option value="25">Partly match</option>
+  <option value="0">All receipts</option>
+</select>
 <div class="recipes-list">
-  <div class="recipe" *ngFor="let recipe of recipesList">
+  <div class="recipe" *ngFor="let recipe of filteredRecipeList">
     <app-recipe-item [recipe]="recipe"></app-recipe-item>
   </div>
 </div>
-
-<!--<li *ngFor="let item of items | filterRecipes:filterargs"><span>{{item.title}}</span></li>-->
-
