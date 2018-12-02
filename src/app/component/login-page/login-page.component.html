@@ -1,6 +1,6 @@
 <p-growl [(value)]="msgs"></p-growl>
 <div class="primeng-container">
-  <strong><label>Please sign in</label></strong>
+  <strong class="form_title"><label>Please sign in</label></strong>
 
   <span class="ui-float-label">
     <input [(ngModel)] = "valueEmail" id="inputEmail" class="float-input" type="text" size="30" pInputText>
@@ -15,9 +15,10 @@
 
   <span class="error_log"></span>
 
-  <a class="link" (click)="onNavigate()">Forgot password?</a>
-
-  <a class="link" (click)="onRegistrationPage()">Sign up</a>
+  <div class="link_area">
+    <a class="link" (click)="onNavigate()">Forgot password?</a>
+    <a class="link" (click)="onRegistrationPage()">Sign up</a>
+  </div>
 
   <button pButton type="button" label="Sign in" (click)="checkUser()" [disabled]="(!valueEmail || !valuePass)"></button>
 </div>
