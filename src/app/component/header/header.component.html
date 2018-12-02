@@ -7,11 +7,13 @@
     </div>
   </div>
   <div *ngIf="loginService.isLoggedInUser()" class="tabs">
-    <div class="row header__under">
-      <div class="container">
-        <a class="link_tabs" routerLinkActive="active-link" [routerLink]="['fridge']">My fridge</a>
-        <span> / </span>
-        <a class="link_tabs" routerLinkActive="active-link" [routerLink]="['recipes']">My recipes</a>
+    <div class="container">
+      <div class="row header__under">
+        <div class="container">
+          <a class="link_tabs" routerLinkActive="active-link" [routerLink]="['fridge']">My fridge</a>
+          <span> / </span>
+          <a class="link_tabs" routerLinkActive="active-link" [routerLink]="['recipes']">My recipes</a>
+        </div>
       </div>
     </div>
   </div>
