@@ -11,16 +11,24 @@ export class RecipePopupComponent implements OnInit {
 
   @Input()
   public passDataToParent: EventEmitter<Recipe>;
+  public isPopupShown: boolean = false;
 
-  public recipe: Recipe = new Recipe('','','','','',0);
+  public recipe: Recipe;
+  public defaultRecipe: Recipe = new Recipe('','','','','',0);
 
   constructor(private emitterService: EmitterService) { }
 
   ngOnInit() {
+    this.recipe = this.defaultRecipe;
     this.emitterService.getRecipeEmitter().subscribe(recipe => {
-      console.log('<<< ', recipe);
       this.recipe = recipe;
+      this.isPopupShown = true;
     });
+  }
+
+  public closePopup() {
+    this.recipe = this.defaultRecipe;
+    this.isPopupShown = false;
   }
 
 }
