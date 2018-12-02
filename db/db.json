@@ -36,6 +36,14 @@
         {
           "name": "Chicken",
           "amount": 0.5
+        },
+        {
+          "name": "water",
+          "amount": 12
+        },
+        {
+          "name": "tea",
+          "amount": 12
         }
       ],
       "id": 2
