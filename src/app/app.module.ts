@@ -26,7 +26,7 @@ import { RecipePopupComponent } from './component/recipes/components/recipe-popu
 
 import { UsersService } from './service/users.service';
 
-import { FilterRecipesPipe } from './pipes/filter-recipes.pipe';
+import { Ng2CompleterModule } from 'ng2-completer';
 
 
 @NgModule({
@@ -46,7 +46,6 @@ import { FilterRecipesPipe } from './pipes/filter-recipes.pipe';
     ProductListComponent,
     ProductItemComponent,
     RecipeItemComponent,
-    FilterRecipesPipe,
     RecipePopupComponent
   ],
   imports: [
@@ -65,7 +64,8 @@ import { FilterRecipesPipe } from './pipes/filter-recipes.pipe';
     MatSnackBarModule,
     MatInputModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2CompleterModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]

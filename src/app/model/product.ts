@@ -1,9 +1,9 @@
 export class Product {
-  public name: string;
+  public productItem: ProductItem;
   public amount: number;
 
-  constructor(name: string, amount: number) {
-    this.name = name;
+  constructor(productItem: ProductItem, amount: number) {
+    this.productItem = productItem;
     this.amount = amount;
   }
 }

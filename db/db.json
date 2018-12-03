@@ -1,28 +1,49 @@
 {
+  "products": [
+    {
+      "id": 1,
+      "name": "Potato"
+    },
+    {
+      "id": 2,
+      "name": "Cheese"
+    },
+    {
+      "id": 3,
+      "name": "Milk"
+    },
+    {
+      "id": 4,
+      "name": "Tomato"
+    },
+    {
+      "id": 5,
+      "name": "Water"
+    },
+    {
+      "id": 6,
+      "name": "Tea"
+    },
+    {
+      "id": 7,
+      "name": "Chicken"
+    },
+    {
+      "id": 8,
+      "name": "Beetroot"
+    },
+    {
+      "id": 9,
+      "name": "Coffee"
+    }
+  ],
   "users": [
     {
       "id": 1,
       "name": "Name",
       "email": "Email",
       "password": "Password",
-      "productList": [
-        {
-          "name": "potato",
-          "amount": 3
-        },
-        {
-          "name": "cheese",
-          "amount": 400
-        },
-        {
-          "name": "milk",
-          "amount": 1
-        },
-        {
-          "name": "wisky",
-          "amount": 23
-        }
-      ]
+      "productList": []
     },
     {
       "name": "t",
@@ -30,24 +51,32 @@
       "password": "t",
       "productList": [
         {
-          "name": "Potato",
-          "amount": 1
+          "productItem": {
+            "id": 1,
+            "name": "Potato"
+          },
+          "amount": 5
         },
         {
-          "name": "Chicken",
-          "amount": 0.5
+          "productItem": {
+            "id": 4,
+            "name": "Tomato"
+          },
+          "amount": 3
         },
         {
-          "name": "water",
-          "amount": 12
+          "productItem": {
+            "id": 5,
+            "name": "Water"
+          },
+          "amount": 2
         },
         {
-          "name": "tea",
-          "amount": 12
-        },
-        {
-          "name": "Tomato",
-          "amount": 1
+          "productItem": {
+            "id": 6,
+            "name": "Tea"
+          },
+          "amount": 2
         }
       ],
       "id": 2
@@ -56,16 +85,7 @@
       "name": "test2",
       "email": "test2",
       "password": "test2",
-      "productList": [
-        {
-          "name": "1212",
-          "amount": 324
-        },
-        {
-          "name": "342414",
-          "amount": 1241
-        }
-      ],
+      "productList": [],
       "id": 3
     },
     {
@@ -86,19 +106,31 @@
       "image": "image",
       "productList": [
         {
-          "name": "Potato",
-          "amount": 1
+          "productItem": {
+            "id": 1,
+            "name": "Potato"
+          },
+          "amount": 5
         },
         {
-          "name": "Chicken",
+          "productItem": {
+            "id": 7,
+            "name": "Chicken"
+          },
           "amount": 0.5
         },
         {
-          "name": "Tomato",
+          "productItem": {
+            "id": 4,
+            "name": "Tomato"
+          },
           "amount": 3
         },
         {
-          "name": "Beetroot",
+          "productItem": {
+            "id": 8,
+            "name": "Tomato"
+          },
           "amount": 4
         }
       ]
@@ -112,11 +144,17 @@
       "image": "image2",
       "productList": [
         {
-          "name": "water",
+          "productItem": {
+            "id": 5,
+            "name": "Water"
+          },
           "amount": 1
         },
         {
-          "name": "tea",
+          "productItem": {
+            "id": 6,
+            "name": "Tea"
+          },
           "amount": 1
         }
       ]
@@ -130,11 +168,17 @@
       "image": "image3",
       "productList": [
         {
-          "name": "Chicken",
+          "productItem": {
+            "id": 7,
+            "name": "Chicken"
+          },
           "amount": 1
         },
         {
-          "name": "Water",
+          "productItem": {
+            "id": 5,
+            "name": "Water"
+          },
           "amount": 1
         }
       ]
@@ -148,11 +192,17 @@
       "image": "image4",
       "productList": [
         {
-          "name": "Cofee",
+          "productItem": {
+            "id": 9,
+            "name": "Coffee"
+          },
           "amount": 1
         },
         {
-          "name": "Milk",
+          "productItem": {
+            "id": 3,
+            "name": "Milk"
+          },
           "amount": 1
         }
       ]

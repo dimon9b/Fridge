@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 import {of} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {LoginService} from './login.service';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -14,7 +15,12 @@ export class ProductService {
   productList: Array<Product> = [];
 
   constructor(private userService: UsersService,
-              private loginService: LoginService) {
+              private loginService: LoginService,
+              private http: HttpClient) {
+  }
+
+  public getProducts(): Observable<ProductItem[]> {
+    return this.http.get<ProductItem[]>('http://localhost:3000/products');
   }
 
   public getProductList(): Observable<Product[]> {

@@ -55,7 +55,7 @@ export class RecipesListComponent implements OnInit {
     this.allRecipeList.forEach(recipe => {
       const receiptProductList = recipe.productList;
       const foundedProducts = receiptProductList.filter(productInReceipt => {
-        return this.userProductList.find(productInFridge => productInFridge.name === productInReceipt.name);
+        return this.userProductList.find(productInFridge => productInFridge.productItem.id === productInReceipt.productItem.id);
       });
       const productMatch = (foundedProducts.length / recipe.productList.length) * 100;
       this.sortedRecipeList.push(new RecipeMatchItem(recipe, productMatch));

@@ -14,7 +14,7 @@ export class RecipePopupComponent implements OnInit {
   public isPopupShown: boolean = false;
 
   public recipe: Recipe;
-  public defaultRecipe: Recipe = new Recipe('','','','','',0);
+  public defaultRecipe: Recipe = new Recipe('', '', '', '');
 
   constructor(private emitterService: EmitterService) { }
 

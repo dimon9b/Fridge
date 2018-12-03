@@ -4,7 +4,7 @@
     <div class="recipe__title">{{recipe.name}}</div>
     <div class="recipe__prodList">
       <ul *ngFor="let item of recipe.productList">
-        <li><span>{{item.name}}</span> - <span>{{item.amount}}</span></li>
+        <li><span>{{item.productItem.name}}</span> - <span>{{item.amount}}</span></li>
       </ul>
     </div>
     <div class="recipe_description">{{recipe.longDescription}}</div>

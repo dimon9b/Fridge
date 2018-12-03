@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from '../../../service/product.service';
 import {Product} from '../../../model/product';
+import { CompleterService, CompleterData } from 'ng2-completer';
+import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'app-add-product',
@@ -10,16 +12,26 @@ import {Product} from '../../../model/product';
 export class AddProductComponent implements OnInit {
   public productName: string;
   public productAmount: number;
+  public dataService: CompleterData;
+  public productItems: ProductItem[];
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+    private completerService: CompleterService) {
   }
 
   ngOnInit() {
+    this.productService.getProducts().subscribe(products => {
+      this.productItems = products;
+      this.dataService = this.completerService.local(this.productItems , 'name', 'name');
+    });
   }
 
   public addProduct() {
-    this.productService.addProduct(new Product(this.productName, this.productAmount));
-    this.productName = '';
-    this.productAmount = null;
+    const foundProductItem = this.productItems.find(productIem => productIem.name === this.productName);
+    if (!isNullOrUndefined(foundProductItem) && !isNullOrUndefined(this.productAmount)) {
+      this.productService.addProduct(new Product(foundProductItem, this.productAmount));
+      this.productName = '';
+      this.productAmount = null;
+    }
   }
 }

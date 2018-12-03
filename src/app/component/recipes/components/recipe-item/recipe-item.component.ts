@@ -1,8 +1,8 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
-import {Product} from "../../../../model/product";
-import {RecipesService} from "../../../../service/recipes.service";
-import {Recipe} from "../../../../model/recipe";
-import {EmitterService} from "../../../../service/emitter.service";
+import {Product} from '../../../../model/product';
+import {RecipesService} from '../../../../service/recipes.service';
+import {Recipe} from '../../../../model/recipe';
+import {EmitterService} from '../../../../service/emitter.service';
 
 @Component({
   selector: 'app-recipe-item',

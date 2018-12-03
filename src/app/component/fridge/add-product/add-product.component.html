@@ -1,4 +1,4 @@
 <h2>Add product to my list: </h2>
-<input type="text" id="productName" [(ngModel)]="productName">
+<ng2-completer [(ngModel)]="productName" [datasource]="dataService" [minSearchLength]="0"></ng2-completer>
 <input type="number" id="productAmount" min="0" [(ngModel)]="productAmount">
 <button (click)="addProduct()">Add to list</button>
