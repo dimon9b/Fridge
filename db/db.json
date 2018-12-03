@@ -77,6 +77,13 @@
             "name": "Tea"
           },
           "amount": 2
+        },
+        {
+          "productItem": {
+            "id": 1,
+            "name": "Potato"
+          },
+          "amount": 1
         }
       ],
       "id": 2
