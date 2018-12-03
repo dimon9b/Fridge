@@ -1,13 +1,24 @@
 <div class="recipe_popup" *ngIf="isPopupShown">
   <div class="recipe_popup_body">
-    <div class="recipe__image">{{recipe.image}}</div>
-    <div class="recipe__title">{{recipe.name}}</div>
-    <div class="recipe__prodList">
-      <ul *ngFor="let item of recipe.productList">
-        <li><span>{{item.productItem.name}}</span> - <span>{{item.amount}}</span></li>
+
+    <div class="image_part">
+      <div class="recipe__image">{{recipe.image}}</div>
+    </div>
+
+    <div class="title_part">
+      <div class="recipe__title">{{recipe.name}}</div>
+      <ul class="recipe__prodList">
+        <li *ngFor="let item of recipe.productList">
+          <span>{{item.productItem.name}}</span> - <span>{{item.amount}}</span>
+        </li>
       </ul>
     </div>
-    <div class="recipe_description">{{recipe.longDescription}}</div>
+
+    <div class="text_part">
+      <div class="recipe_description">{{recipe.longDescription}}</div>
+    </div>
+
     <div class="popup_close" (click)="closePopup()"></div>
+
   </div>
 </div>

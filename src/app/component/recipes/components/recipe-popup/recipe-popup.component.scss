@@ -21,15 +21,48 @@
   height: 75%;
   max-height: 800px;
   background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 30px;
 }
+
+.image_part {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  height: 200px;
+  max-width: 40%;
+  border: 1px solid red;
+}
+
+.title_part {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 210px);
+  padding-left: 10px;
+  .recipe__title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .recipe__prodList {
+    font-style: italic;
+  }
+}
+
+.recipe__prodList {
+  padding-left: 10px;
+}
+
 
 .popup_close {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #000;
-  width: 20px;
-  height: 20px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAiElEQVR42r2RsQrDMAxEBRdl8SDcX8lQPGg1GBI6lvz/h7QyRRXV0qUULwfvwZ1tenw5PxToRPWMC52eA9+WDnlh3HFQ/xBQl86NFYJqeGflkiogrOvVlIFhqURFVho3x1moGAa3deMs+LS30CAhBN5nNxeT5hbJ1zwmji2k+aF6NENIPf/hs54f0sZFUVAMigAAAABJRU5ErkJggg==) no-repeat;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 
