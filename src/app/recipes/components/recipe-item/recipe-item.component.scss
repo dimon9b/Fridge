@@ -1,3 +1,11 @@
 .full_info {
   cursor: pointer;
 }
+
+.recipe__item {
+  margin: 20px;
+  background: url("/src/assets/images/sticker.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+}
