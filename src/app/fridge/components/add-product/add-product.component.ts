@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {ProductService} from '../../../core/service/product.service';
-import {Product} from '../../../core/model/product';
-import { CompleterService, CompleterData } from 'ng2-completer';
+import { Component, OnInit } from '@angular/core';
 import { isNullOrUndefined } from 'util';
+import { ProductService } from '../../../core/service/product.service';
+import { Product } from '../../../core/model/product';
+import { CompleterService, CompleterData, CompleterItem } from 'ng2-completer';
+
 
 @Component({
   selector: 'app-add-product',
@@ -10,10 +11,12 @@ import { isNullOrUndefined } from 'util';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
-  public productName: string;
-  public productAmount: number;
   public dataService: CompleterData;
   public productItems: ProductItem[];
+
+  public choosenProduct: ProductItem;
+  public productName: string;
+  public productAmount: number;
 
   constructor(private productService: ProductService,
     private completerService: CompleterService) {
@@ -26,12 +29,22 @@ export class AddProductComponent implements OnInit {
     });
   }
 
+  public onSelectedProductName(selectedItem: CompleterItem) {
+    this.choosenProduct = selectedItem ? selectedItem.originalObject : null;
+  }
+
   public addProduct() {
-    const foundProductItem = this.productItems.find(productIem => productIem.name === this.productName);
-    if (!isNullOrUndefined(foundProductItem) && !isNullOrUndefined(this.productAmount)) {
-      this.productService.addProduct(new Product(foundProductItem, this.productAmount));
-      this.productName = '';
+    if (!isNullOrUndefined(this.choosenProduct) && !isNullOrUndefined(this.productAmount)) {
+      this.productService.addProduct(new Product(this.choosenProduct, this.productAmount));
+      this.choosenProduct = null;
       this.productAmount = null;
+      this.productName = '';
     }
+  }
+
+  public isAddProductBtnDisabled(): boolean {
+    return isNullOrUndefined(this.productName)
+    || isNullOrUndefined(this.productAmount)
+    || this.productAmount === 0;
   }
 }

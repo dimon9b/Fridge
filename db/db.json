@@ -2,39 +2,48 @@
   "products": [
     {
       "id": 1,
-      "name": "Potato"
+      "name": "Potato",
+      "itemType": "pc"
     },
     {
       "id": 2,
-      "name": "Cheese"
+      "name": "Cheese",
+      "itemType": "g"
     },
     {
       "id": 3,
-      "name": "Milk"
+      "name": "Milk",
+      "itemType": "ml"
     },
     {
       "id": 4,
-      "name": "Tomato"
+      "name": "Tomato",
+      "itemType": "pc"
     },
     {
       "id": 5,
-      "name": "Water"
+      "name": "Oil",
+      "itemType": "ml"
     },
     {
       "id": 6,
-      "name": "Tea"
+      "name": "Butter",
+      "itemType": "g"
     },
     {
       "id": 7,
-      "name": "Chicken"
+      "name": "Chicken",
+      "itemType": "g"
     },
     {
       "id": 8,
-      "name": "Beetroot"
+      "name": "Beetroot",
+      "itemType": "pc"
     },
     {
       "id": 9,
-      "name": "Coffee"
+      "name": "Cucumber",
+      "itemType": "pc"
     }
   ],
   "users": [
@@ -53,37 +62,82 @@
         {
           "productItem": {
             "id": 1,
-            "name": "Potato"
+            "name": "Potato",
+            "itemType": "pc"
           },
           "amount": 5
         },
         {
           "productItem": {
             "id": 4,
-            "name": "Tomato"
+            "name": "Tomato",
+            "itemType": "pc"
           },
           "amount": 3
         },
         {
           "productItem": {
             "id": 5,
-            "name": "Water"
+            "name": "Oil",
+            "itemType": "ml"
           },
           "amount": 2
         },
         {
           "productItem": {
             "id": 6,
-            "name": "Tea"
+            "name": "Butter",
+            "itemType": "g"
           },
           "amount": 2
         },
         {
           "productItem": {
             "id": 1,
-            "name": "Potato"
+            "name": "Potato",
+            "itemType": "pc"
           },
           "amount": 1
+        },
+        {
+          "productItem": {
+            "id": 3,
+            "name": "Milk",
+            "itemType": "ml"
+          },
+          "amount": 3
+        },
+        {
+          "productItem": {
+            "id": 9,
+            "name": "Cucumber",
+            "itemType": "pc"
+          },
+          "amount": 1
+        },
+        {
+          "productItem": {
+            "id": 1,
+            "name": "Potato",
+            "itemType": "pc"
+          },
+          "amount": 2
+        },
+        {
+          "productItem": {
+            "id": 1,
+            "name": "Potato",
+            "itemType": "pc"
+          },
+          "amount": 1
+        },
+        {
+          "productItem": {
+            "id": 3,
+            "name": "Milk",
+            "itemType": "ml"
+          },
+          "amount": 12
         }
       ],
       "id": 2
@@ -115,28 +169,32 @@
         {
           "productItem": {
             "id": 1,
-            "name": "Potato"
+            "name": "Potato",
+            "itemType": "pc"
           },
           "amount": 5
         },
         {
           "productItem": {
             "id": 7,
-            "name": "Chicken"
+            "name": "Chicken",
+            "itemType": "g"
           },
           "amount": 0.5
         },
         {
           "productItem": {
             "id": 4,
-            "name": "Tomato"
+            "name": "Tomato",
+            "itemType": "pc"
           },
           "amount": 3
         },
         {
           "productItem": {
             "id": 8,
-            "name": "Tomato"
+            "name": "Beetroot",
+            "itemType": "pc"
           },
           "amount": 4
         }
@@ -144,23 +202,25 @@
     },
     {
       "id": 2,
-      "name": "Tea",
+      "name": "Butter",
       "type": "Dessert",
-      "shortDescription": "This is Tea",
-      "longDescription": "This is Tea",
+      "shortDescription": "This is Butter",
+      "longDescription": "This is Butter",
       "image": "image2",
       "productList": [
         {
           "productItem": {
             "id": 5,
-            "name": "Water"
+            "name": "Oil",
+            "itemType": "ml"
           },
           "amount": 1
         },
         {
           "productItem": {
             "id": 6,
-            "name": "Tea"
+            "name": "Butter",
+            "itemType": "g"
           },
           "amount": 1
         }
@@ -177,14 +237,16 @@
         {
           "productItem": {
             "id": 7,
-            "name": "Chicken"
+            "name": "Chicken",
+            "itemType": "g"
           },
           "amount": 1
         },
         {
           "productItem": {
             "id": 5,
-            "name": "Water"
+            "name": "Oil",
+            "itemType": "ml"
           },
           "amount": 1
         }
@@ -201,14 +263,16 @@
         {
           "productItem": {
             "id": 9,
-            "name": "Coffee"
+            "name": "Cucumber",
+            "itemType": "pc"
           },
           "amount": 1
         },
         {
           "productItem": {
             "id": 3,
-            "name": "Milk"
+            "name": "Milk",
+            "itemType": "ml"
           },
           "amount": 1
         }
