@@ -1,0 +1,52 @@
+@import "../../../../styles/styles";
+
+.primeng-container {
+  @include flex-column-centered;
+  margin: 30px auto;
+  max-width: 500px;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+  .flex-row {
+    display: flex;
+    align-items: center;
+    margin-top: 2vh;
+
+    input {
+      margin-left: 1vw;
+    }
+  }
+
+  .form_title {
+    font-size: 25px;
+  }
+
+  .link_area {
+    text-align: center;
+    padding-top: 15px;
+
+    a {
+      display: inline-block;
+      margin: 0 15px;
+      text-decoration: underline;
+      color: #3e1495;
+      cursor: pointer;
+    }
+  }
+
+  #account-type-label {
+    margin-top: 2vh;
+  }
+
+  .ui-float-label {
+    margin-top: 3vh;
+  }
+
+  button {
+    margin-top: 3vh;
+  }
+}

@@ -1,11 +1,12 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {ForgotComponent} from './component/registration-and-login/components/forgot/forgot.component';
-import {RegistrationFormComponent} from './component/registration-and-login/components/registration-form/registration-form.component';
-import {HomePageComponent} from './component/share/components/home-page/home-page.component';
-import {LoginPageComponent} from './component/registration-and-login/components/login-page/login-page.component';
-import {FridgeComponent} from './component/fridge/fridge.component';
-import {RecipesComponent} from './component/recipes/recipes.component';
+import {ForgotComponent} from './auth/components/forgot/forgot.component';
+import {RegistrationFormComponent} from './auth/components/registration-form/registration-form.component';
+import {HomePageComponent} from './core/components/home-page/home-page.component';
+import {LoginPageComponent} from './auth/components/login-page/login-page.component';
+import {FridgeComponent} from './fridge/fridge.component';
+import {RecipesComponent} from './recipes/recipes.component';
+import {ModifyingUserProdlistComponent} from './fridge/components/modifying-user-prodlist/modifying-user-prodlist.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'forgot', component: ForgotComponent},
   {path: 'fridge', component: FridgeComponent},
   {path: 'recipes', component: RecipesComponent},
+  {path: 'fridge/modify', component: ModifyingUserProdlistComponent},
 ];
 
 @NgModule({

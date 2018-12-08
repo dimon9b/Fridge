@@ -8,25 +8,27 @@ import { AppRoutingModule} from './app.routing';
 import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { RegistrationFormComponent } from './component/registration-and-login/components/registration-form/registration-form.component';
-import { ForgotComponent } from './component/registration-and-login/components/forgot/forgot.component';
-import { HomePageComponent } from './component/share/components/home-page/home-page.component';
-import { LoginPageComponent } from './component/registration-and-login/components/login-page/login-page.component';
-import { HeaderComponent } from './component/share/components/header/header.component';
-import { FooterComponent } from './component/share/components/footer/footer.component';
-import { FridgeComponent } from './component/fridge/fridge.component';
-import { RecipesComponent } from './component/recipes/recipes.component';
-import { AddProductComponent } from './component/fridge/components/add-product/add-product.component';
-import { RecipesListComponent } from './component/recipes/components/recipes-list/recipes-list.component';
-import { AddRecipeComponent } from './component/recipes/components/add-recipe/add-recipe.component';
-import { ProductListComponent } from './component/fridge/components/product-list/product-list.component';
-import { ProductItemComponent } from './component/fridge/components/product-item/product-item.component';
-import { RecipeItemComponent } from './component/recipes/components/recipe-item/recipe-item.component';
-import { RecipePopupComponent } from './component/recipes/components/recipe-popup/recipe-popup.component';
+import { RegistrationFormComponent } from './auth/components/registration-form/registration-form.component';
+import { ForgotComponent } from './auth/components/forgot/forgot.component';
+import { HomePageComponent } from './core/components/home-page/home-page.component';
+import { LoginPageComponent } from './auth/components/login-page/login-page.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { FooterComponent } from './core/components/footer/footer.component';
+import { FridgeComponent } from './fridge/fridge.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { AddProductComponent } from './fridge/components/add-product/add-product.component';
+import { RecipesListComponent } from './recipes/components/recipes-list/recipes-list.component';
+import { AddRecipeComponent } from './recipes/components/add-recipe/add-recipe.component';
+import { ProductListComponent } from './fridge/components/product-list/product-list.component';
+import { ProductItemComponent } from './fridge/components/product-item/product-item.component';
+import { RecipeItemComponent } from './recipes/components/recipe-item/recipe-item.component';
+import { RecipePopupComponent } from './recipes/components/recipe-popup/recipe-popup.component';
 
-import { UsersService } from './service/users.service';
+import { UsersService } from './core/service/users.service';
 
 import { Ng2CompleterModule } from 'ng2-completer';
+import { ModifyingUserProdlistComponent } from './fridge/components/modifying-user-prodlist/modifying-user-prodlist.component';
+import { ModifyingUserProdItemComponent } from './fridge/components/modifying-user-prod-item/modifying-user-prod-item.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { Ng2CompleterModule } from 'ng2-completer';
     ProductListComponent,
     ProductItemComponent,
     RecipeItemComponent,
-    RecipePopupComponent
+    RecipePopupComponent,
+    ModifyingUserProdlistComponent,
+    ModifyingUserProdItemComponent
   ],
   imports: [
     BrowserModule,
