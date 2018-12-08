@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Message } from 'primeng/api';
 import { Router } from '@angular/router';
-import { UsersService } from '../../service/users.service';
-import { User } from '../../model/user';
+import { UsersService } from '../../../../service/users.service';
+import { User } from '../../../../model/user';
 
 
 @Component({

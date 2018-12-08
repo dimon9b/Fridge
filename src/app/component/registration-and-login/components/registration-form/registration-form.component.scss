@@ -1,15 +1,18 @@
-@import "../../../styles/styles";
+@import "../../../../../styles/styles";
+
+//.registrationForm {
+//  text-align: center;
+//}
 
 .primeng-container {
   @include flex-column-centered;
-  margin: 30px auto;
   max-width: 500px;
   background: #fff;
+  margin: 30px auto;
   border: 2px solid #ccc;
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-
 
   .flex-row {
     display: flex;
@@ -21,29 +24,12 @@
     }
   }
 
-  .form_title {
-    font-size: 25px;
-  }
-
-  .link_area {
-    text-align: center;
-    padding-top: 15px;
-
-    a {
-      display: inline-block;
-      margin: 0 15px;
-      text-decoration: underline;
-      color: #3e1495;
-      cursor: pointer;
-    }
-  }
-
   #account-type-label {
     margin-top: 2vh;
   }
 
   .ui-float-label {
-    margin-top: 3vh;
+    margin-top: 3.5vh;
   }
 
   button {

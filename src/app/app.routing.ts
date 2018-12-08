@@ -1,9 +1,9 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {ForgotComponent} from './component/forgot/forgot.component';
-import {RegistrationFormComponent} from './component/registration-form/registration-form.component';
-import {HomePageComponent} from './component/home-page/home-page.component';
-import {LoginPageComponent} from './component/login-page/login-page.component';
+import {ForgotComponent} from './component/registration-and-login/components/forgot/forgot.component';
+import {RegistrationFormComponent} from './component/registration-and-login/components/registration-form/registration-form.component';
+import {HomePageComponent} from './component/share/components/home-page/home-page.component';
+import {LoginPageComponent} from './component/registration-and-login/components/login-page/login-page.component';
 import {FridgeComponent} from './component/fridge/fridge.component';
 import {RecipesComponent} from './component/recipes/recipes.component';
 
