@@ -44,6 +44,106 @@
       "id": 9,
       "name": "Cucumber",
       "itemType": "pc"
+    },
+    {
+      "id": 10,
+      "name": "Banan",
+      "itemType": "pc"
+    },
+    {
+      "id": 11,
+      "name": "Orange",
+      "itemType": "pc"
+    },
+    {
+      "id": 12,
+      "name": "Avocado",
+      "itemType": "pc"
+    },
+    {
+      "id": 12,
+      "name": "Sausage",
+      "itemType": "g"
+    },
+    {
+      "id": 13,
+      "name": "Flour",
+      "itemType": "g"
+    },
+    {
+      "id": 14,
+      "name": "Rice",
+      "itemType": "g"
+    },
+    {
+      "id": 15,
+      "name": "Sugar",
+      "itemType": "g"
+    },
+    {
+      "id": 16,
+      "name": "Salt",
+      "itemType": "g"
+    },
+    {
+      "id": 17,
+      "name": "Mayonnaise",
+      "itemType": "g"
+    },
+    {
+      "id": 18,
+      "name": "Apple",
+      "itemType": "g"
+    },
+    {
+      "id": 19,
+      "name": "Carrot",
+      "itemType": "pc"
+    },
+    {
+      "id": 20,
+      "name": "Forcemeat",
+      "itemType": "pc"
+    },
+    {
+      "id": 21,
+      "name": "Pepper",
+      "itemType": "pc"
+    },
+    {
+      "id": 22,
+      "name": "Kefir",
+      "itemType": "ml"
+    },
+    {
+      "id": 23,
+      "name": "Lemon",
+      "itemType": "pc"
+    },
+    {
+      "id": 24,
+      "name": "Garnet",
+      "itemType": "pc"
+    },
+    {
+      "id": 25,
+      "name": "Cabbage",
+      "itemType": "pc"
+    },
+    {
+      "id": 26,
+      "name": "Bulgur",
+      "itemType": "g"
+    },
+    {
+      "id": 27,
+      "name": "Spaghetti",
+      "itemType": "g"
+    },
+    {
+      "id": 28,
+      "name": "Fish",
+      "itemType": "g"
     }
   ],
   "users": [
@@ -90,6 +190,110 @@
             "itemType": "pc"
           },
           "amount": 2
+        },
+        {
+          "productItem": {
+            "id": 6,
+            "name": "Butter",
+            "itemType": "g"
+          },
+          "amount": 100
+        },
+        {
+          "productItem": {
+            "id": 13,
+            "name": "Flour",
+            "itemType": "g"
+          },
+          "amount": 150
+        },
+        {
+          "productItem": {
+            "id": 28,
+            "name": "Fish",
+            "itemType": "g"
+          },
+          "amount": 500
+        },
+        {
+          "productItem": {
+            "id": 20,
+            "name": "Forcemeat",
+            "itemType": "pc"
+          },
+          "amount": 700
+        },
+        {
+          "productItem": {
+            "id": 27,
+            "name": "Spaghetti",
+            "itemType": "g"
+          },
+          "amount": 500
+        },
+        {
+          "productItem": {
+            "id": 14,
+            "name": "Rice",
+            "itemType": "g"
+          },
+          "amount": 350
+        },
+        {
+          "productItem": {
+            "id": 10,
+            "name": "Banan",
+            "itemType": "pc"
+          },
+          "amount": 5
+        },
+        {
+          "productItem": {
+            "id": 23,
+            "name": "Lemon",
+            "itemType": "pc"
+          },
+          "amount": 3
+        },
+        {
+          "productItem": {
+            "id": 3,
+            "name": "Milk",
+            "itemType": "ml"
+          },
+          "amount": 300
+        },
+        {
+          "productItem": {
+            "id": 2,
+            "name": "Cheese",
+            "itemType": "g"
+          },
+          "amount": 170
+        },
+        {
+          "productItem": {
+            "id": 12,
+            "name": "Sausage",
+            "itemType": "g"
+          },
+          "amount": 500
+        },
+        {
+          "productItem": {
+            "id": 16,
+            "name": "Salt",
+            "itemType": "g"
+          },
+          "amount": 100
+        },
+        {
+          "productItem": {
+            "id": 15,
+            "name": "Sugar",
+            "itemType": "g"
+          },
+          "amount": 500
         }
       ],
       "id": 2
