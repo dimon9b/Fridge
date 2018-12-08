@@ -36,7 +36,13 @@ export class ProductService {
 
   public addProduct(product: Product) {
     const userId = this.loginService.getUserId();
-    this.productList.push(product);
+    const existedProductIndex = this.productList.findIndex(p => p.productItem.id === product.productItem.id);
+
+    if (existedProductIndex < 0) {
+      this.productList.push(product);
+    } else {
+      this.productList[existedProductIndex].amount += product.amount;
+    }
 
     this.userService.getUserById(userId).subscribe(user => {
       user.productList = this.productList;

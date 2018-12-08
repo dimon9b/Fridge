@@ -65,7 +65,7 @@
             "name": "Potato",
             "itemType": "pc"
           },
-          "amount": 5
+          "amount": 6
         },
         {
           "productItem": {
@@ -73,7 +73,7 @@
             "name": "Tomato",
             "itemType": "pc"
           },
-          "amount": 3
+          "amount": 6
         },
         {
           "productItem": {
@@ -81,31 +81,7 @@
             "name": "Oil",
             "itemType": "ml"
           },
-          "amount": 2
-        },
-        {
-          "productItem": {
-            "id": 6,
-            "name": "Butter",
-            "itemType": "g"
-          },
-          "amount": 2
-        },
-        {
-          "productItem": {
-            "id": 1,
-            "name": "Potato",
-            "itemType": "pc"
-          },
-          "amount": 1
-        },
-        {
-          "productItem": {
-            "id": 3,
-            "name": "Milk",
-            "itemType": "ml"
-          },
-          "amount": 3
+          "amount": 302
         },
         {
           "productItem": {
@@ -113,31 +89,7 @@
             "name": "Cucumber",
             "itemType": "pc"
           },
-          "amount": 1
-        },
-        {
-          "productItem": {
-            "id": 1,
-            "name": "Potato",
-            "itemType": "pc"
-          },
           "amount": 2
-        },
-        {
-          "productItem": {
-            "id": 1,
-            "name": "Potato",
-            "itemType": "pc"
-          },
-          "amount": 1
-        },
-        {
-          "productItem": {
-            "id": 3,
-            "name": "Milk",
-            "itemType": "ml"
-          },
-          "amount": 12
         }
       ],
       "id": 2
