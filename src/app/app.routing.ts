@@ -7,15 +7,16 @@ import {LoginPageComponent} from './auth/components/login-page/login-page.compon
 import {FridgeComponent} from './fridge/fridge.component';
 import {RecipesComponent} from './recipes/recipes.component';
 import {ModifyingUserProdlistComponent} from './fridge/components/modifying-user-prodlist/modifying-user-prodlist.component';
+import {AuthGuard} from "./core/guards/auth.guard";
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'registration', component: RegistrationFormComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'forgot', component: ForgotComponent},
-  {path: 'fridge', component: FridgeComponent},
-  {path: 'recipes', component: RecipesComponent},
-  {path: 'fridge/modify', component: ModifyingUserProdlistComponent},
+  {path: 'fridge', component: FridgeComponent, canActivate: [AuthGuard]},
+  {path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard]},
+  {path: 'fridge/modify', component: ModifyingUserProdlistComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({
