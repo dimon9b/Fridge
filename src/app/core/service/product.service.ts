@@ -35,15 +35,23 @@ export class ProductService {
   }
 
   public addProduct(product: Product) {
-    const userId = this.loginService.getUserId();
     const existedProductIndex = this.productList.findIndex(p => p.productItem.id === product.productItem.id);
-
     if (existedProductIndex < 0) {
       this.productList.push(product);
     } else {
       this.productList[existedProductIndex].amount += product.amount;
     }
 
+    this.updateUserProdList();
+  }
+
+  public changeProdList() {
+    this.productList = this.productList.filter(product => product.amount > 0);
+    this.updateUserProdList();
+  }
+
+  public updateUserProdList() {
+    const userId = this.loginService.getUserId();
     this.userService.getUserById(userId).subscribe(user => {
       user.productList = this.productList;
       this.userService.updateUser(user).subscribe();

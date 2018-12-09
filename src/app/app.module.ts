@@ -14,8 +14,8 @@ import { HomePageComponent } from './core/components/home-page/home-page.compone
 import { LoginPageComponent } from './auth/components/login-page/login-page.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { FooterComponent } from './core/components/footer/footer.component';
-import { FridgeComponent } from './fridge/fridge.component';
-import { RecipesComponent } from './recipes/recipes.component';
+import { FridgeComponent } from './fridge/components/fridge/fridge.component';
+import { RecipesComponent } from './recipes/components/recipes/recipes.component';
 import { AddProductComponent } from './fridge/components/add-product/add-product.component';
 import { RecipesListComponent } from './recipes/components/recipes-list/recipes-list.component';
 import { AddRecipeComponent } from './recipes/components/add-recipe/add-recipe.component';

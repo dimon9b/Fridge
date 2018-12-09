@@ -42,7 +42,7 @@ export class RecipesListComponent implements OnInit {
     // });
   }
 
-  filterRecipeListByProductMatch(productMatch: number) {
+  public filterRecipeListByProductMatch(productMatch: number) {
     let lastIndex = this.sortedRecipeList.length;
     if (productMatch > 0) {
       const foundIndex = this.sortedRecipeList.findIndex(p => p.productMatch < productMatch);

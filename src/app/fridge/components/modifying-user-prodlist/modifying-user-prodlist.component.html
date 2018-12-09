@@ -1,3 +1,11 @@
-<p>
-  modifying-user-prodlist works!
-</p>
+<div class="productList__container">
+  <h2>Change your product list: </h2>
+  <div class=productList>
+    <ul>
+      <li *ngFor="let product of productList">
+        <app-modifying-user-prod-item [product]="product"></app-modifying-user-prod-item>
+      </li>
+    </ul>
+  </div>
+  <button name="save" value="save" class="save" (click)="saveNewProdList()">Save</button>
+</div>

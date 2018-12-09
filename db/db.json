@@ -161,139 +161,11 @@
       "productList": [
         {
           "productItem": {
-            "id": 1,
-            "name": "Potato",
-            "itemType": "pc"
-          },
-          "amount": 6
-        },
-        {
-          "productItem": {
-            "id": 4,
-            "name": "Tomato",
-            "itemType": "pc"
-          },
-          "amount": 6
-        },
-        {
-          "productItem": {
-            "id": 5,
-            "name": "Oil",
-            "itemType": "ml"
-          },
-          "amount": 302
-        },
-        {
-          "productItem": {
-            "id": 9,
-            "name": "Cucumber",
-            "itemType": "pc"
-          },
-          "amount": 2
-        },
-        {
-          "productItem": {
-            "id": 6,
-            "name": "Butter",
-            "itemType": "g"
-          },
-          "amount": 100
-        },
-        {
-          "productItem": {
-            "id": 13,
-            "name": "Flour",
-            "itemType": "g"
-          },
-          "amount": 150
-        },
-        {
-          "productItem": {
-            "id": 28,
-            "name": "Fish",
-            "itemType": "g"
-          },
-          "amount": 500
-        },
-        {
-          "productItem": {
             "id": 20,
             "name": "Forcemeat",
             "itemType": "pc"
           },
-          "amount": 700
-        },
-        {
-          "productItem": {
-            "id": 27,
-            "name": "Spaghetti",
-            "itemType": "g"
-          },
-          "amount": 500
-        },
-        {
-          "productItem": {
-            "id": 14,
-            "name": "Rice",
-            "itemType": "g"
-          },
-          "amount": 350
-        },
-        {
-          "productItem": {
-            "id": 10,
-            "name": "Banan",
-            "itemType": "pc"
-          },
-          "amount": 5
-        },
-        {
-          "productItem": {
-            "id": 23,
-            "name": "Lemon",
-            "itemType": "pc"
-          },
-          "amount": 3
-        },
-        {
-          "productItem": {
-            "id": 3,
-            "name": "Milk",
-            "itemType": "ml"
-          },
-          "amount": 300
-        },
-        {
-          "productItem": {
-            "id": 2,
-            "name": "Cheese",
-            "itemType": "g"
-          },
-          "amount": 170
-        },
-        {
-          "productItem": {
-            "id": 12,
-            "name": "Sausage",
-            "itemType": "g"
-          },
-          "amount": 500
-        },
-        {
-          "productItem": {
-            "id": 16,
-            "name": "Salt",
-            "itemType": "g"
-          },
-          "amount": 100
-        },
-        {
-          "productItem": {
-            "id": 15,
-            "name": "Sugar",
-            "itemType": "g"
-          },
-          "amount": 500
+          "amount": 2
         }
       ],
       "id": 2
@@ -410,10 +282,10 @@
     },
     {
       "id": 4,
-      "name": "Cofee",
+      "name": "Coffee",
       "type": "Other",
-      "shortDescription": "This is Cofee",
-      "longDescription": "This is Cofee",
+      "shortDescription": "This is Coffee",
+      "longDescription": "This is Coffee",
       "image": "image4",
       "productList": [
         {

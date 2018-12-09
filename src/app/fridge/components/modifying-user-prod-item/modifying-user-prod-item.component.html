@@ -1,3 +1,5 @@
 <p>
-  modifying-user-prod-item works!
+  <span class="product__name">{{ product.productItem.name }}</span> -
+  <input type="number" name="amount" class="product__amount" [(ngModel)]="product.amount">
+  <span>{{ product.productItem.itemType}}.</span>
 </p>

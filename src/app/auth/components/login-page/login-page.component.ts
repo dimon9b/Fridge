@@ -16,6 +16,7 @@ export class LoginPageComponent {
 
   public valuePass: string;
   public valueEmail: string;
+  public login_error = '';
 
 
   constructor(private router: Router, private usersServices: UsersService, private loginService: LoginService) { }
@@ -25,12 +26,10 @@ export class LoginPageComponent {
       .getUserByEmail(this.valueEmail)
       .subscribe((response: Array<User>) => {
         if (response.length > 0 && response[0].password === this.valuePass) {
-          console.log(response);
-          console.log('Hello ' + response[0].name);
           this.loginService.loginUser(response[0].id);
           this.router.navigate(['fridge']);
         } else {
-          console.log('There is no such email!!!');
+          this.login_error = 'Invalid email or password!';
         }
       });
   }
