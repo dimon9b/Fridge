@@ -34,12 +34,12 @@ export class LoginPageComponent {
       });
   }
 
-  public onNavigate() {
-    this.router.navigate(['forgot']);
+  public onForgot() {
+    this.router.navigate(['auth/forgot']);
   }
 
   public onRegistrationPage() {
-    this.router.navigate(['registration']);
+    this.router.navigate(['auth/registration']);
   }
 
 }

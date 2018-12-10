@@ -161,11 +161,43 @@
       "productList": [
         {
           "productItem": {
-            "id": 20,
-            "name": "Forcemeat",
+            "id": 2,
+            "name": "Cheese",
+            "itemType": "g"
+          },
+          "amount": 31
+        },
+        {
+          "productItem": {
+            "id": 6,
+            "name": "Butter",
+            "itemType": "g"
+          },
+          "amount": 33
+        },
+        {
+          "productItem": {
+            "id": 11,
+            "name": "Orange",
             "itemType": "pc"
           },
-          "amount": 2
+          "amount": 32
+        },
+        {
+          "productItem": {
+            "id": 12,
+            "name": "Sausage",
+            "itemType": "g"
+          },
+          "amount": 42
+        },
+        {
+          "productItem": {
+            "id": 26,
+            "name": "Bulgur",
+            "itemType": "g"
+          },
+          "amount": 321
         }
       ],
       "id": 2

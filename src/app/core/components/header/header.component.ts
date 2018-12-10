@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router} from '@angular/router';
 import {LoginService} from '../../service/login.service';
-import {UsersService} from '../../service/users.service';
 import {ProductService} from '../../service/product.service';
 
 @Component({
@@ -15,23 +14,28 @@ export class HeaderComponent {
               private productService: ProductService) { }
 
   public onLoginPage() {
-    this.router.navigate(['login']);
+    this.router.navigate(['auth/login']);
   }
 
   public onRegistrationPage() {
-    this.router.navigate(['registration']);
+    this.router.navigate(['auth/registration']);
   }
 
   public onHomePage() {
     this.router.navigate(['']);
   }
 
+  public navigateToFridge() {
+    this.router.navigate(['fridge']);
+  }
+
+  public navigateToRecipes() {
+    this.router.navigate(['recipes']);
+  }
+
   public logout() {
     this.router.navigate(['']);
     this.productService.clearProductList();
     this.loginService.logoutUser();
-  }
-  getUserIdStatus() {
-    console.log(this.loginService.getUserId());
   }
 }

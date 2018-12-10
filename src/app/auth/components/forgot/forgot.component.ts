@@ -16,7 +16,7 @@ export class ForgotComponent {
   constructor(private router: Router, private UsersServices: UsersService) { }
 
   public backToForm() {
-    this.router.navigate(['login']);
+    this.router.navigate(['auth/login']);
   }
 
   public findPassByEmail() {

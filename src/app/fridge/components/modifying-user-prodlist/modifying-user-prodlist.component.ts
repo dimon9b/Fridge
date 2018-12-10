@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Product} from '../../../core/model/product';
 import {ProductService} from '../../../core/service/product.service';
 import {Router} from '@angular/router';
@@ -23,7 +23,7 @@ export class ModifyingUserProdlistComponent implements OnInit {
 
   public saveNewProdList() {
     this.productService.changeProdList();
-    this.router.navigate(['fridge']);
+    this.router.navigate(['fridge/my-list']);
   }
 
 }

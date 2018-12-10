@@ -11,9 +11,9 @@
     <div class="container">
       <div class="row header__under">
         <div class="container">
-          <a class="link_tabs" routerLinkActive="active-link" [routerLink]="['fridge']">My fridge</a>
+          <a class="link_tabs" routerLinkActive="active-link" (click)="navigateToFridge()" >My fridge</a>
           <span> / </span>
-          <a class="link_tabs" routerLinkActive="active-link" [routerLink]="['recipes']">My recipes</a>
+          <a class="link_tabs" routerLinkActive="active-link" (click)="navigateToRecipes()">My recipes</a>
         </div>
       </div>
     </div>

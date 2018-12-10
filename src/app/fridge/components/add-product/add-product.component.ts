@@ -3,6 +3,7 @@ import { isNullOrUndefined } from 'util';
 import { ProductService } from '../../../core/service/product.service';
 import { Product } from '../../../core/model/product';
 import { CompleterService, CompleterData, CompleterItem } from 'ng2-completer';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -19,7 +20,8 @@ export class AddProductComponent implements OnInit {
   public productAmount: number;
 
   constructor(private productService: ProductService,
-    private completerService: CompleterService) {
+              private completerService: CompleterService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -39,6 +41,7 @@ export class AddProductComponent implements OnInit {
       this.choosenProduct = null;
       this.productAmount = null;
       this.productName = '';
+      this.router.navigate(['fridge/my-list']);
     }
   }
 
